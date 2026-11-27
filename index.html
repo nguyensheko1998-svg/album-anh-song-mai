@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Album hình ảnh sống mãi với thời gian - Xem ảnh lớn</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- CSS tùy biến cho modal xem ảnh lớn (Bài 29) -->
+<link href="css/modal.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">&#128247; Album Kỷ Niệm</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuChinh" aria-controls="menuChinh" aria-expanded="false" aria-label="Mở menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuChinh">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="#">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#album">Album</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tac-gia">Tác giả</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lien-he">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== TIÊU ĐỀ ===== -->
+  <header class="jumbotron jumbotron-fluid text-center text-white banner mb-0">
+    <div class="container">
+      <h1 class="display-4">Album hình ảnh sống mãi với thời gian</h1>
+      <p class="lead">Lưu giữ vẻ đẹp của thiên nhiên, đất nước và cuộc sống qua từng khung hình</p>
+      <a href="#album" class="btn btn-warning btn-lg mt-2">Xem album</a>
+    </div>
+  </header>
+
+  <!-- ===== LƯỚI ẢNH ===== -->
+  <section id="album" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-2">Bộ sưu tập ảnh</h2>
+      <p class="text-center text-muted mb-5">Nhấn vào ảnh nhỏ để xem ảnh lớn. Trong cửa sổ xem ảnh có thể bấm &#8249; &#8250; hoặc phím mũi tên để chuyển ảnh.</p>
+      <div class="row justify-content-center">
+        <!-- Ảnh 1 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh01.jpg" class="img-fluid card-img-top" alt="Sài Gòn về đêm"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh01_large.jpg" data-caption="Các toà nhà ven sông Sài Gòn rực rỡ ánh đèn, phản chiếu lung linh xuống mặt nước.">
+              <div class="overlay">
+                <h5>Sài Gòn về đêm</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sài Gòn về đêm</h5>
+              <p class="card-text text-muted">Các toà nhà ven sông Sài Gòn rực rỡ ánh đèn, phản chiếu lung linh xuống mặt nước.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 2 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh02.jpg" class="img-fluid card-img-top" alt="Thốt nốt trong hoàng hôn"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh02_large.jpg" data-caption="Cây thốt nốt đứng một mình giữa cánh đồng lúa xanh khi hoàng hôn buông xuống.">
+              <div class="overlay">
+                <h5>Thốt nốt trong hoàng hôn</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Thốt nốt trong hoàng hôn</h5>
+              <p class="card-text text-muted">Cây thốt nốt đứng một mình giữa cánh đồng lúa xanh khi hoàng hôn buông xuống.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 3 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh03.jpg" class="img-fluid card-img-top" alt="Mùa gặt"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh03_large.jpg" data-caption="Máy gặt đang thu hoạch trên cánh đồng lúa chín vàng trải dài.">
+              <div class="overlay">
+                <h5>Mùa gặt</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Mùa gặt</h5>
+              <p class="card-text text-muted">Máy gặt đang thu hoạch trên cánh đồng lúa chín vàng trải dài.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 4 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh04.jpg" class="img-fluid card-img-top" alt="Đồi hoa tím"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh04_large.jpg" data-caption="Thảm hoa tím phủ kín sườn đồi dưới ánh nắng chiều trên núi.">
+              <div class="overlay">
+                <h5>Đồi hoa tím</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Đồi hoa tím</h5>
+              <p class="card-text text-muted">Thảm hoa tím phủ kín sườn đồi dưới ánh nắng chiều trên núi.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 5 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh05.jpg" class="img-fluid card-img-top" alt="Vịnh Hạ Long"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh05_large.jpg" data-caption="Những đảo đá vôi sừng sững giữa làn nước xanh ngọc, tàu du lịch nối đuôi nhau.">
+              <div class="overlay">
+                <h5>Vịnh Hạ Long</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Vịnh Hạ Long</h5>
+              <p class="card-text text-muted">Những đảo đá vôi sừng sững giữa làn nước xanh ngọc, tàu du lịch nối đuôi nhau.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 6 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh06.jpg" class="img-fluid card-img-top" alt="Thuyền thúng trên biển"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh06_large.jpg" data-caption="Ngư dân chèo thuyền thúng giữa biển khi mặt trời đỏ rực lặn xuống.">
+              <div class="overlay">
+                <h5>Thuyền thúng trên biển</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Thuyền thúng trên biển</h5>
+              <p class="card-text text-muted">Ngư dân chèo thuyền thúng giữa biển khi mặt trời đỏ rực lặn xuống.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 7 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh07.jpg" class="img-fluid card-img-top" alt="Đường hoa ngày Tết"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh07_large.jpg" data-caption="Con phố được trang hoàng hoa tươi và tiểu cảnh rực rỡ đón năm mới.">
+              <div class="overlay">
+                <h5>Đường hoa ngày Tết</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Đường hoa ngày Tết</h5>
+              <p class="card-text text-muted">Con phố được trang hoàng hoa tươi và tiểu cảnh rực rỡ đón năm mới.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 8 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh08.jpg" class="img-fluid card-img-top" alt="Hoa sen hồng"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh08_large.jpg" data-caption="Những đoá sen hồng vươn lên giữa đầm lá xanh mướt.">
+              <div class="overlay">
+                <h5>Hoa sen hồng</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Hoa sen hồng</h5>
+              <p class="card-text text-muted">Những đoá sen hồng vươn lên giữa đầm lá xanh mướt.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 9 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh09.jpg" class="img-fluid card-img-top" alt="Trăng rằm trên kênh"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh09_large.jpg" data-caption="Trăng tròn treo cao trên dòng kênh lấp lánh ánh đèn về đêm.">
+              <div class="overlay">
+                <h5>Trăng rằm trên kênh</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Trăng rằm trên kênh</h5>
+              <p class="card-text text-muted">Trăng tròn treo cao trên dòng kênh lấp lánh ánh đèn về đêm.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh 10 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="album-img">
+              <img src="images/anh10.jpg" class="img-fluid card-img-top" alt="Ruộng bậc thang"
+                   data-toggle="modal" data-target="#imageModal"
+                   data-src="images/anh10_large.jpg" data-caption="Ruộng bậc thang chín vàng uốn lượn theo sườn núi, bên mái nhà nhỏ.">
+              <div class="overlay">
+                <h5>Ruộng bậc thang</h5>
+                <span class="btn btn-outline-light btn-sm">&#128269; Xem ảnh lớn</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ruộng bậc thang</h5>
+              <p class="card-text text-muted">Ruộng bậc thang chín vàng uốn lượn theo sườn núi, bên mái nhà nhỏ.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHÂN DUNG TÁC GIẢ ===== -->
+  <section id="tac-gia" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Tác giả album</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="images/chan-dung.jpg" class="img-fluid rounded-circle shadow chan-dung" alt="Ảnh chân dung Nguyễn Bình Phước">
+        </div>
+        <div class="col-md-8">
+          <h3>Nguyễn Bình Phước</h3>
+          <p class="text-muted mb-3">Sinh viên ngành Công nghệ Thông tin - Trường Đại học Văn Hiến</p>
+          <table class="table table-sm table-borderless w-auto">
+            <tr><th scope="row">MSSV:</th><td>231A010795</td></tr>
+            <tr><th scope="row">Môn học:</th><td>Lập trình Web</td></tr>
+            <tr><th scope="row">Bài tập:</th><td>Bài tập 29 - Website Album hình ảnh nâng cao</td></tr>
+          </table>
+          <p>Nâng cấp từ Bài tập 28: thêm chức năng xem ảnh lớn bằng <code>Bootstrap Modal</code>.
+            Mỗi ảnh nhỏ có thuộc tính <code>data-toggle="modal"</code>, <code>data-target="#imageModal"</code>
+            và <code>data-src</code> trỏ tới ảnh lớn; JavaScript gán ảnh lớn vào <code>#modalImage</code> khi click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="lien-he" class="bg-dark text-white-50 text-center py-4">
+    <div class="container">
+      <p class="mb-1 text-white">Album hình ảnh sống mãi với thời gian</p>
+      <p class="mb-0 small">&copy; 2026 Nguyễn Bình Phước - MSSV: 231A010795 - Đại học Văn Hiến</p>
+    </div>
+  </footer>
+
+  <!-- ===== BOOTSTRAP MODAL XEM ẢNH LỚN (chèn cuối body) ===== -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Xem ảnh</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">&times;</button>
+        </div>
+        <!-- Body: chứa ảnh lớn -->
+        <div class="modal-body text-center">
+          <button type="button" class="nut-chuyen nut-truoc" id="btnPrev" aria-label="Ảnh trước">&#8249;</button>
+          <img id="modalImage" src="" class="img-fluid" alt="Ảnh lớn"/>
+          <button type="button" class="nut-chuyen nut-sau" id="btnNext" aria-label="Ảnh sau">&#8250;</button>
+        </div>
+        <!-- Footer: chú thích, số thứ tự, nút đóng -->
+        <div class="modal-footer justify-content-between">
+          <p class="mb-0 small" id="modalCaption"></p>
+          <div class="d-flex align-items-center">
+            <span class="badge badge-warning mr-3" id="modalCounter">1 / 1</span>
+            <button type="button" class="btn btn-outline-light btn-sm" data-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- jQuery, Popper và Bootstrap JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+<script>
+  // ===== 1. Script theo đề bài: click ảnh nhỏ -> gán ảnh lớn cho #modalImage =====
+  document.querySelectorAll('img[data-toggle="modal"]').forEach(img => {
+    img.addEventListener('click', function () {
+      const src = this.getAttribute('data-src');
+      document.getElementById('modalImage').setAttribute('src', src);
+    });
+  });
+
+  // ===== 2. Tùy biến thêm: tiêu đề, chú thích, số thứ tự, chuyển ảnh trước/sau =====
+  const dsAnh = Array.from(document.querySelectorAll('img[data-toggle="modal"]'));
+  let viTri = 0; // vị trí ảnh đang xem
+
+  function hienAnh(i) {
+    viTri = (i + dsAnh.length) % dsAnh.length;   // quay vòng đầu/cuối
+    const anh = dsAnh[viTri];
+    const modalImage = document.getElementById('modalImage');
+    modalImage.classList.remove('hien');
+    modalImage.setAttribute('src', anh.getAttribute('data-src'));
+    modalImage.setAttribute('alt', anh.getAttribute('alt'));
+    document.getElementById('modalTitle').textContent = anh.getAttribute('alt');
+    document.getElementById('modalCaption').textContent = anh.getAttribute('data-caption');
+    document.getElementById('modalCounter').textContent = (viTri + 1) + ' / ' + dsAnh.length;
+    void modalImage.offsetWidth;                 // chạy lại hiệu ứng mờ dần
+    modalImage.classList.add('hien');
+  }
+
+  dsAnh.forEach((img, i) => img.addEventListener('click', () => hienAnh(i)));
+  document.getElementById('btnPrev').addEventListener('click', () => hienAnh(viTri - 1));
+  document.getElementById('btnNext').addEventListener('click', () => hienAnh(viTri + 1));
+
+  // Phím mũi tên trái/phải khi modal đang mở
+  document.addEventListener('keydown', function (e) {
+    if (!document.getElementById('imageModal').classList.contains('show')) return;
+    if (e.key === 'ArrowLeft') hienAnh(viTri - 1);
+    if (e.key === 'ArrowRight') hienAnh(viTri + 1);
+  });
+</script>
+</body>
+</html>

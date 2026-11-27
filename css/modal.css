@@ -1,0 +1,97 @@
+/* ===== Tùy biến giao diện modal xem ảnh lớn (Bài 29) ===== */
+
+/* Lớp nền phía sau modal: tối hơn mặc định */
+.modal-backdrop.show {
+  opacity: 0.85;
+}
+
+/* Khung modal: nền tối, viền gradient, bo góc, đổ bóng */
+#imageModal .modal-content {
+  background: #1c1f26;
+  color: #f1f1f1;
+  border: 3px solid transparent;
+  border-radius: 14px;
+  background-image: linear-gradient(#1c1f26, #1c1f26), linear-gradient(135deg, #f6d365, #fda085, #a18cd1);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+#imageModal .modal-header,
+#imageModal .modal-footer {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+#imageModal .modal-title {
+  font-weight: 600;
+  color: #f6d365;
+}
+#imageModal .close {
+  color: #fff;
+  text-shadow: none;
+  opacity: 0.8;
+}
+#imageModal .close:hover {
+  opacity: 1;
+  color: #fda085;
+}
+
+/* Hiệu ứng phóng to khi modal mở (thay hiệu ứng trượt mặc định) */
+#imageModal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-out;
+}
+#imageModal.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* Ảnh lớn */
+#imageModal .modal-body {
+  position: relative;
+  background: #000;
+  padding: 0.75rem;
+}
+#modalImage {
+  max-height: 75vh;
+  border-radius: 6px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+#modalImage.hien {
+  animation: moDan 0.4s ease forwards;
+}
+@keyframes moDan {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Nút chuyển ảnh trước / sau */
+.nut-chuyen {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 30px;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.nut-chuyen:hover {
+  background: rgba(246, 211, 101, 0.85);
+  color: #1c1f26;
+}
+.nut-truoc { left: 15px; }
+.nut-sau   { right: 15px; }
+
+/* Lớp phủ trên ảnh nhỏ không chặn cú click vào ảnh */
+.album-img .overlay {
+  pointer-events: none;
+}
+.album-img img {
+  cursor: zoom-in;
+}

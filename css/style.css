@@ -1,0 +1,76 @@
+/* ===== CSS tự viết thêm cho Album ===== */
+
+/* Chừa chỗ cho thanh menu cố định khi bấm link #album, #tac-gia */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+/* Ảnh nền tiêu đề */
+.banner {
+  background: linear-gradient(rgba(20, 20, 40, 0.55), rgba(20, 20, 40, 0.55)), url("../images/anh01.jpg") center / cover;
+  padding: 110px 0;
+}
+.banner h1 {
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Khung ảnh + hiệu ứng khi rê chuột (overlay) */
+.album-img {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.album-img img {
+  transition: transform 0.4s ease;
+}
+.album-img .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.album-img:hover img {
+  transform: scale(1.1);
+}
+.album-img:hover .overlay {
+  opacity: 1;
+}
+
+/* Thẻ ảnh nhấc lên khi rê chuột */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ảnh chân dung */
+.chan-dung {
+  max-width: 260px;
+  border: 6px solid #fff;
+}
+
+/* Ảnh chụp có kích thước khác nhau (dọc/ngang):
+   cắt về cùng tỉ lệ 4:3 để các ô trong lưới đều nhau */
+.album-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Ảnh dọc trong cửa sổ phóng to không vượt quá chiều cao màn hình */
+#anhLon {
+  max-height: 80vh;
+  object-fit: contain;
+  background: #000;
+}
